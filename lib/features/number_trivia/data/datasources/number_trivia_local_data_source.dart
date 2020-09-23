@@ -1,0 +1,9 @@
+import 'dart:async';
+
+import 'package:flutter_clean_architecture/features/number_trivia/data/models/number_trivia_model.dart';
+
+abstract class NumberTriviaLocalDataSource {
+  Future<NumberTriviaModel> getLastNumberTrivia();
+
+  Future<NumberTriviaModel> cacheNumberTrivia(NumberTriviaModel triviaModel);
+}
