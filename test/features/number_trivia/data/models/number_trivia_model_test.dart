@@ -14,7 +14,7 @@ void main() {
       final Map<String, dynamic> jsonMap =
           json.decode(fixture('trivia.json'));
 
-      final result = NumberTriviaModel.fromeJson(jsonMap);
+      final result = NumberTriviaModel.fromJson(jsonMap);
       expect(result, isA<NumberTrivia>());
     });
   });
@@ -24,7 +24,7 @@ void main() {
       final Map<String, dynamic> jsonMap =
           json.decode(fixture('trivia_double.json'));
 
-      final result = NumberTriviaModel.fromeJson(jsonMap);
+      final result = NumberTriviaModel.fromJson(jsonMap);
       expect(result, isA<NumberTrivia>());
     });
   });

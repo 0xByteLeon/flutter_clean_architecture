@@ -31,6 +31,10 @@ dependencies:
   provider: ^4.3.2+2
   equatable: ^1.2.5
   dartz: ^0.9.1
+  data_connection_checker: ^0.3.4
+  shared_preferences: ^0.5.12
+  dio: ^3.0.10
+  flutter_bloc: ^6.0.5
 
 dev_dependencies:
   flutter_test:

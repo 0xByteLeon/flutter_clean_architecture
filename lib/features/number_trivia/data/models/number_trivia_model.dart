@@ -3,7 +3,7 @@ import 'package:flutter_clean_architecture/features/number_trivia/domain/entitie
 class NumberTriviaModel extends NumberTrivia {
   NumberTriviaModel(String text, int number) : super(text, number);
 
-  factory NumberTriviaModel.fromeJson(Map<String, dynamic> json) {
+  factory NumberTriviaModel.fromJson(Map<String, dynamic> json) {
     return NumberTriviaModel(json['text'], (json['number'] as num).toInt());
   }
 
