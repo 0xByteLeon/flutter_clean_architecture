@@ -14,13 +14,16 @@ class NumberTriviaRemoteDataSourceImpl implements NumberTriviaRemoteDataSource {
   NumberTriviaRemoteDataSourceImpl(this.dio) {}
 
   @override
-  Future<NumberTriviaModel> getConcreteNumberTrivia(int number) => _getTriviaNumber('http://numbersapi.com/$number');
+  Future<NumberTriviaModel> getConcreteNumberTrivia(int number) =>
+      _getTriviaNumber('http://numbersapi.com/$number?json');
 
   @override
-  Future<NumberTriviaModel> getRandomNumberTrivia() => _getTriviaNumber('http://numbersapi.com/random');
+  Future<NumberTriviaModel> getRandomNumberTrivia() =>
+      _getTriviaNumber('http://numbersapi.com/random?json');
+
   Future<NumberTriviaModel> _getTriviaNumber(String url) async {
     final response = await dio.get(url);
-    print(response);
+    print(response.data);
     if (200 == response.statusCode) {
       return NumberTriviaModel.fromJson(response.data);
     } else {
